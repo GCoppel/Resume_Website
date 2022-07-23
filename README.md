@@ -1,4 +1,7 @@
 # georgecoppel.com
+
+![Landing Page](Welcome_Example.jpg)
+
 Code and assets used for www.georgecoppel.com available to view. 
 
 Uses the three.js framework and lots of gltf files created in the Blender 3D modelling software. 
