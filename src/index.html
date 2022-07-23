@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>George Coppel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+    <div class="wrapper">
+        <div id="typing" style="display: none">WELCOME</div>
+    </div>
+
+    <div id="Sec1" class="sec">
+        <div class="heading" style=" width: 5ch; animation: typing .75s steps(5), blink .5s step-end infinite alternate;">INTRO</div>
+        <p id="D0">
+            <span style="font-size: 1.3em">Hi! My name is </span>
+            <br>
+            <span style="font-size: 1.5em; font-weight: bold;">George Coppel</span>
+            <br> <br>
+            I'm a junior computer science major at UAH. 
+            Right now, I’ve got a pretty wide range of experience with different programming languages and libraries, most of which you can see the logos of in that wireframe tower on the left.
+            <br> <br>
+            Recently, I've been mostly learning web development and a little bit of machine learning with PyTorch for a personal project,
+            but I'm interested in exploring lots of types of software develoment too. Gotta cover all the bases, you know?
+            <br> <br>
+            Outside of that part of my life, I’m involved with a few on-campus groups including UAH’s Geographical Information Systems (GIS) club and the UAH chapter of Circle K International, of which I am the secretary for. 
+            <br> <br>
+            Feel free to reach out to me through any of the links at the very top of this page. Or you can usually find me in either Morton Hall or Charger Union if you happen to be on campus. 
+        </p>
+    </div>
+
+    <div id="Sec2" class="sec">
+        <div class="heading">ABOUT ME</div>
+        <ul id="D1">
+            <li>Pursuing BS in Computer Science at UAH</li>
+            <br>
+            <li>Current Standing: Junior</li>
+            <br>
+            <li>Expected Graduation: Fall 2023</li>
+            <br>
+            <li>GPA: 3.9/4.0</li>
+        </ul>
+    </div>
+
+    <div id="Sec3" class="sec">
+        <div class="heading" style=" width: 6ch; animation: typing .6s steps(6), blink .5s step-end infinite alternate;">SKILLS</div>
+        <ul id="D2">
+            <li>Languages: <ul>
+                <li>Java</li>
+                <li>C & C++</li>
+                <li>Python
+                    <ul>
+                        <li>PyTorch (...to a degree)</li>
+                    </ul>
+                </li>
+                <li>HTML & CSS
+                    <ul>
+                        <li>SASS/SCSS</li>
+                    </ul>
+                </li>
+                <li>JavaScript 
+                    <ul>
+                        <li>node.js</li>
+                        <li>three.js</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <br>
+        <li>Advanced understanding of Microsoft Office Suite</li>
+        <br>
+        <li>Moderate understanding of Google and Adobe Suites</li>
+        <br>
+        <li>Moderate understanding of Blender 3D modeling software</li>
+        </ul>
+    </div>  
+
+    <div id="Sec4" class="sec">
+        <div class="heading" style=" width: 10ch; animation: typing 1s steps(10), blink .5s step-end infinite alternate;">COURSEWORK</div>
+        <div id="bcontainer">
+            <button id="b1" onclick="ccMenu()">COMPLETED COURSES</button>
+            <button id="b2" onclick="ipMenu()">IN-PROGRESS COURSES</button>
+        </div>
+    </div>
+
+    <div id="contact"style="display: none">CONTACT</div>
+    <div id="contactContainer" style="display: none">
+            <a class="email" href="mailto: georgelcoppe@gmail.com">Email <span>gmcoppel@epbfi.com</span></a>
+            <a href="https://github.com/GCoppel">GitHub</a>
+            <a href="https://www.linkedin.com/in/george-coppel-b4b440236">LinkedIn</a>
+    </div>
+
+    <article id="completed" class="complete" style="display: none">
+        <button onclick="ccMenu()">CLOSE</button>
+        <h1 style="border-bottom: 1px solid white; margin-bottom: 20px;">COMPLETED COURSES</h1>
+        <ul>
+            <li onclick="mm1()">CS 321 - Intro to Object-Oriented Programming in Java</li>
+            <li onclick="mm2()">CS 309 - Computer Organization and Switching Theory</li>
+            <li onclick="mm3()">CS 221 - Computer Science II: Data Structures</li>
+            <li onclick="mm4()">CS 214 - Intro to Discrete Structure</li>
+            <li onclick="mm5()">CS 121 - Computer Science I</li>
+            <li onclick="mm6()">MA 244 - Intro to Linear Algebra</li>
+            <li onclick="mm7()">MA 171, 172, and 201 - Calculus A-C</li>
+        </ul>
+        <div class="clickable">Click to Expand --></div>
+    </article>
+
+    <article id="sm1" class="submenu" style="display: none">
+        <h1>CS 321</h1>
+        <h2>Intro to Object-Oriented Programming in Java</h2>
+        <p>"Writing substantial object-oriented programs in Java, including design, documentation and testing. Advanced data structures (e.g., balanced trees, hash tables). Graphical interface programming using the Java abstract windowing toolkit. Comparison with other object-oriented languages, notably C++."</p>
+    </article>
+    <article id="sm2" class="submenu" style="display: none">
+        <h1>CS 309</h1>
+        <h2>Computer Organization and Switching Theory</h2>
+        <p>"Boolean algebra, Boolean function minimization techniques, design and analysis of combinational circuits, design and analysis of sequential circuits. Computer hardware organization, including CPU, instruction representation and executive. Programing in a representative assembly language, including floating point programming. Overview of software systems: loaders, assembler, compiler, interpreters, operating systems." Includes a lab section.</p>
+    </article>
+    <article id="sm3" class="submenu" style="display: none">
+        <h1>CS 221</h1>
+        <h2>Computer Science II: Data Structures</h2>
+        <p>"Advanced features of the C++ programming language, including pointers, recursion, classes, and inheritance. Fundamental data structures including linked lists, stacks, queues, binary search trees. Basic sort and search algorithms. Design, development, and documentation of object-oriented programs."</p>
+    </article>
+    <article id="sm4" class="submenu" style="display: none">
+        <h1>CS 214</h1>
+        <h2>Intro to Discrete Structure</h2>
+        <p>"Review of set algebra including mappings and relations. Algebraic structures including semigroups and groups. Elements of theory of directed and undirected graphs; Boolean algebra and propositional logic and applications of these structures to various areas of computer science."</p>
+    </article>
+    <article id="sm5" class="submenu" style="display: none">
+        <h1>CS 121</h1>
+        <h2>Computer Science I</h2>
+        <p>"Review of problem solving techniques, algorithm development, and fundamental language features; e.g., loops, decisions. In depth coverage of functions, arrays, I/O. Principles of software design, implementation, and testing. Introduction to object oriented design and the C++ programming language."</p>
+    </article>
+    <article id="sm6" class="submenu" style="display: none">
+        <h1>MA 244</h1>
+        <h2>Intro to Linear Algebra</h2>
+        <p>"Systems of linear equations, matrices, matrix operations, determinants, vector spaces, bases, dimension of a vector space, inner product, Gram-Schmidt process, linear transformations, change of basis, similar matrices, eigenvalues and eigenvectors, diagonalization, symmetric matrices, and applications."</p>
+    </article>
+    <article id="sm7" class="submenu" style="display: none">
+        <h1>MA 171, 172, and 201</h1>
+        <h2>Calculus A-C</h2>
+        <p>"Limits, derivatives, applications of the derivative, definite and indefinite integrals, exponential and logarithmic functions, and inverse functions."</p>
+        <br>
+        <p>"Techniques of integration, applications of the integral, polar coordinates, sequences, series, and conic sections."</p>
+        <br>
+        <p>"Vectors, vector-valued functions, partial derivatives, multiple integrals, vector fields, line and surface integrals."</p>
+    </article>
+
+    <article id="inProgress" class="complete" style="display: none">
+        <button onclick="ipMenu()">CLOSE</button>
+        <h1>IN-PROGRESS COURSES</h1>
+        <h3>(FALL 2022)</h3>
+        <ul>
+            <li onclick="ip1()">CS 371 - Mobile Computing App Inct & D</li>
+            <li onclick="ip2()">CS 330 - Artificial Intelligence & Game Dev</li>
+            <li onclick="ip3()">CS 317 - Intro to Design/Analysis of Algorithms</li>
+            <li onclick="ip4()">EH 301 - Technical Writing</li>
+            <li onclick="ip5()">MA 385 - Intro to Probability & Statistics</li>
+        </ul>
+        <div class="clickable" style="top: 45%">Click to Expand --></div>
+    </article>
+
+    <article id="sp1" class="submenu" style="display: none">
+        <h1>CS 371</h1>
+        <h2>Mobile Computing App Inct & D</h2>
+        <p>"Considers application design for the mobile space with emphasis on mobile computer interfaces, including GUI for mobile environments, entertainment computing, and cross-platform development."</p>
+    </article>
+    <article id="sp2" class="submenu" style="display: none">
+        <h1>CS 330</h1>
+        <h2>Artificial Intelligence & Game Dev</h2>
+        <p>"Techniques and concepts of artificial intelligence applied game development and production. Topics: path planning, decision making, tactics, and non-rational behaviors."</p>
+    </article>
+    <article id="sp3" class="submenu" style="display: none">
+        <h1>CS 317</h1>
+        <h2>Intro to Design/Analysis of Algorithms</h2>
+        <p>"Introduction to complexity analysis of algorithms; emphasis on searching, sorting, finding spanning trees and shortest paths in graphs. Design techniques such as divide & conquer, dynamic programming, and backtracking. Introduction to problem classification; i.e. NP, intractable, and unsolvable."</p>
+    </article>
+    <article id="sp4" class="submenu" style="display: none">
+        <h1>EH 301</h1>
+        <h2>Techincal Writing</h2>
+        <p>"Practical writing, especially technical or scientific reports and proposals, with emphasis on organization, research, and presentation."</p>
+    </article>
+    <article id="sp5" class="submenu" style="display: none">
+        <h1>MA 385</h1>
+        <h2>Intro to Probability & Statistics</h2>
+        <p>"This course is a calculus-based introduction to probability with special emphasis on the interplay between probability and statistics. Topics include descriptive statistics; probability spaces; discrete distributions (including the binomial, geometric, hypergeometric, and Poisson); continuous distributions (including the uniform, exponential, and normal); joint distributions; mean, variance, and general expected value; independence and correlation; the law of large numbers; and the central limit theorem."</p>
+    </article>
+
+    <div id="progressContainer">
+        <video autoplay loop id="city">
+            <source src="loader.mp4" type="video/mp4">
+        </video>
+        <div class="loading">
+            <label for="progressBar">Loading...</label>
+            <progress id="progressBar" value="0" max="100"></progress>
+        </div>
+    </div>
+
+    <div class="mobileMessage">
+        <h1>
+        Mobile Version Not Yet Available
+        </h1>
+    </div>
+
+    <script>
+        //Completed Courses:
+        function ccMenu() {
+            if (inProgress.style.display == "block"){
+                ipMenu();
+            }
+            if(completed.style.display == "block") {
+                completed.style.display = "none";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+            }
+            else {
+                completed.style.display = "block";
+            }
+        }
+
+        function mm1() {
+            completed.style.transform = "translateX(-85%)";
+            sm1.style.display = "block";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+        }
+        function mm2() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+            sm2.style.display = "block";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+        }
+        function mm3() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+            sm3.style.display = "block";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+        }
+        function mm4() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+            sm4.style.display = "block";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+        }
+        function mm5() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+            sm5.style.display = "block";
+                sm6.style.display = "none";
+                sm7.style.display = "none";
+        }
+        function mm6() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+            sm6.style.display = "block";
+                sm7.style.display = "none";
+        }
+        function mm7() {
+            completed.style.transform = "translateX(-85%)";
+                sm1.style.display = "none";
+                sm2.style.display = "none";
+                sm3.style.display = "none";
+                sm4.style.display = "none";
+                sm5.style.display = "none";
+                sm6.style.display = "none";
+            sm7.style.display = "block";
+        }
+
+        //In-Progress Courses:
+
+        function ipMenu() {
+            if (completed.style.display == "block"){
+                ccMenu();
+            }
+            if(inProgress.style.display == "block") {
+                inProgress.style.display = "none";
+                sp1.style.display = "none";
+                sp2.style.display = "none";
+                sp3.style.display = "none";
+                sp4.style.display = "none";
+                sp5.style.display = "none";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+            }
+            else {
+                inProgress.style.display = "block";
+            }
+        }
+
+        function ip1() {
+            inProgress.style.transform = "translateX(-85%)";
+            sp1.style.display = "block";
+                sp2.style.display = "none";
+                sp3.style.display = "none";
+                sp4.style.display = "none";
+                sp5.style.display = "none";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+        }
+        function ip2() {
+            inProgress.style.transform = "translateX(-85%)";
+                sp1.style.display = "none";
+            sp2.style.display = "block";
+                sp3.style.display = "none";
+                sp4.style.display = "none";
+                sp5.style.display = "none";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+        }
+        function ip3() {
+            inProgress.style.transform = "translateX(-85%)";
+                sp1.style.display = "none";
+                sp2.style.display = "none";
+            sp3.style.display = "block";
+                sp4.style.display = "none";
+                sp5.style.display = "none";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+        }
+        function ip4() {
+            inProgress.style.transform = "translateX(-85%)";
+                sp1.style.display = "none";
+                sp2.style.display = "none";
+                sp3.style.display = "none";
+            sp4.style.display = "block";
+                sp5.style.display = "none";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+        }
+        function ip5() {
+            inProgress.style.transform = "translateX(-85%)";
+                sp1.style.display = "none";
+                sp2.style.display = "none";
+                sp3.style.display = "none";
+                sp4.style.display = "none";
+            sp5.style.display = "block";
+                sp6.style.display = "none";
+                sp7.style.display = "none";
+        }
+    </script>
+</body>
+</html> 
